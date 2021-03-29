@@ -99,11 +99,11 @@ if ( $firstnameerr == "" && $lastnameerr== "" && $gendererr == "" && $addresserr
         signUp_details_encode($signUp_details);
 
 
-        if(file_exists("registration.txt"))
+        if(file_exists("Details.txt"))
 
         {
-            $regDetail_open =fopen("registration.txt" , "r");
-            $value = fread($regDetail_open,filesize("registration.txt"));
+            $regDetail_open =fopen("Details.txt" , "r");
+            $value = fread($regDetail_open,filesize("Details.txt"));
             fclose($$regDetail_open);
 
 
@@ -127,7 +127,7 @@ if ( $firstnameerr == "" && $lastnameerr== "" && $gendererr == "" && $addresserr
 
             else
                       {
-                         $reg_open1 = fopen("registration.txt", "a");
+                         $reg_open1 = fopen("Details.txt", "a");
                          fwrite($reg_open1, $reg_details_encode . "\n");
                          fclose($reg_open1);
 
@@ -163,7 +163,7 @@ if ( $firstnameerr == "" && $lastnameerr== "" && $gendererr == "" && $addresserr
 
                     else
                     {
-                      $reg_open2 = fopen("registration.txt", "a");
+                      $reg_open2 = fopen("Details.txt", "a");
                       fwrite($reg_open2, $reg_details_encode . "\n");
                       fclose($reg_open2);
 
